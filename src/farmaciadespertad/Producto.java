@@ -1,7 +1,10 @@
 package farmaciadespertad;
 import java.time.LocalDate; 
+import java.util.*;
 public class Producto 
 {
+    private static List<Integer> Productos = new ArrayList<Integer>();
+    private String nombre = "";
     private String marca = "";
     private int cantidades_disponibles = 0;
     private LocalDate fecha_vencimiento = null;
@@ -17,6 +20,10 @@ public class Producto
     private TipoMedicamento tipo = TipoMedicamento.NoEspeceficado;
     
     // Getters
+    public String getNombre() {
+    return nombre;
+    }
+    
     public String getMarca() {
     return marca;
     }
@@ -37,6 +44,9 @@ public class Producto
     return tipo;
     }
     // Setters
+    public void setNombre(String nombre) {
+      this.nombre = nombre;
+    }
     public void setMarca(String marca) {
       this.marca = marca;
     }
@@ -56,7 +66,9 @@ public class Producto
     public void setTipoMedicamento(TipoMedicamento tipo) {
       this.tipo = tipo;
     }
-   
+    public Producto(String marca){
+        
+    }
 
     
 }

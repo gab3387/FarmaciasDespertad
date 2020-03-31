@@ -1,10 +1,10 @@
 package farmaciadespertad;
 import javax.swing.*;
 
-public class Login extends javax.swing.JFrame {
+public class LoginFrame extends javax.swing.JFrame {
     
     Usuario[] usuarios;
-    public Login() {
+    public LoginFrame() {
         initComponents();
          usuarios =  new Usuario[]{new Usuario("Josue","123"), new Usuario("Sanchez","respeto"), new Usuario("Teddy","Nino")};
     }
@@ -94,8 +94,8 @@ public class Login extends javax.swing.JFrame {
          for(Usuario usuario: usuarios ){
             if(usuario.getUsuario().equals(jIngresoUsuario1.getText()) && usuario.getContrasenia().equals(new String(jContraField.getPassword()))){
                 JOptionPane.showMessageDialog(this, "Bienvenido");
-                 FormularioCompra f = new FormularioCompra();
-                 f.setVisible(true);
+               //  FormularioCompra f = new FormularioCompra();
+                 //f.setVisible(true);
                  this.dispose();              
             } 
         }
@@ -128,14 +128,18 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -144,7 +148,7 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new LoginFrame().setVisible(true);
             }
         });
     }
